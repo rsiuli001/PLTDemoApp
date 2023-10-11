@@ -5,7 +5,7 @@ import {CartBadge} from '../src/components/ui';
 test('Render the CartBadge Component', () => {
   const mockFn = jest.fn();
 
-  render(<CartBadge onPress={mockFn} />);
+  render(<CartBadge numberOfItems={1} onPress={mockFn} />);
 
   const button = screen.getAllByTestId('cart-icon');
   expect(button.length).toEqual(1);

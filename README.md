@@ -44,11 +44,11 @@ yarn ios
 
 ## Screenshots of the application:
 
-![Alt text](<Simulator Screen Shot - iPhone 14 Pro - 2023-10-10 at 19.11.34.png>)
+![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-11 at 16.36.49.png>)
 
+![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-11 at 16.37.25.png>)
 
-
-![Alt text](<Simulator Screen Shot - iPhone 14 Pro - 2023-10-10 at 19.11.34-1.png>) ![Alt text](<Simulator Screen Shot - iPhone 14 Pro - 2023-10-10 at 19.11.44.png>)
+![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-11 at 16.37.36.png>)
 
 
 <video src="Simulator%20Screen%20Recording%20-%20iPhone%2014%20Pro%20-%202023-10-10%20at%2019.12.02.mp4" controls title="Title"></video>

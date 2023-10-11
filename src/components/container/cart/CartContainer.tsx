@@ -15,7 +15,7 @@ const CartContainer: FC<CartContainerProps> = (): JSX.Element => {
 
   const renderCartProduct = (item: CartProduct, index: number) => {
     return (
-      <View style={styles.cartProductContainer}>
+      <View key={index} style={styles.cartProductContainer}>
         <Image style={styles.image} resizeMode={'contain'} source={{uri: item.product.img}} />
         <View style={styles.productDetailsContainer}>
           <Text style={styles.productName} numberOfLines={1} ellipsizeMode={'tail'}>
@@ -36,6 +36,7 @@ const CartContainer: FC<CartContainerProps> = (): JSX.Element => {
       {cartProducts.map((item, index) => {
         return renderCartProduct(item, index);
       })}
+
       <View style={styles.totalPriceContainer}>
         <Text style={styles.priceDetailsText}>PRICE DETAILS ({cartProducts.length} items)</Text>
         <View style={styles.divider} />

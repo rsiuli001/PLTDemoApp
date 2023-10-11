@@ -1,23 +1,13 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {FC, useCallback, useEffect, useLayoutEffect} from 'react';
 import {ShopStackParams} from '../../../navigation/shopStack';
-import {
-  ActivityIndicator,
-  FlatList,
-  ListRenderItem,
-  Pressable,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import {ActivityIndicator, FlatList, ListRenderItem, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {fetchProductReducer} from '../../../redux';
 import {AppDispatch, RootState} from '../../../redux/store';
 import {Product} from '../../../types/product';
 import {ProductCard} from '../../ui';
-import COLOR from '../../../../assets/color';
 import CartBadge from '../../ui/CartBadge';
 import {addProductToCart} from '../../../redux/cart/cartSlice';
 
@@ -29,6 +19,7 @@ const ProductListContainer: FC<ProductListContainerProps> = ({navigation}): JSX.
 
   const isLoading = useSelector((state: RootState) => state.product.isLoading);
   const products = useSelector((state: RootState) => state.product.products);
+  const itemsOnCart = useSelector((state: RootState) => state.cart.cartProduct.reduce((acc, curr) => acc + curr.quantity, 0));
 
   const navigateToCart = useCallback(() => {
     navigation.navigate('CartScreen');
@@ -36,16 +27,18 @@ const ProductListContainer: FC<ProductListContainerProps> = ({navigation}): JSX.
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: () => <CartBadge onPress={navigateToCart} />
+      headerRight: () => <CartBadge numberOfItems={itemsOnCart} onPress={navigateToCart} />
     });
-  }, []);
+  }, [itemsOnCart, navigateToCart]);
 
   useEffect(() => {
     dispatch(fetchProductReducer());
   }, [dispatch]);
 
   const onProductCardPress = (data: Product): void => {
-    console.log('debug: onProductCardPress: ', data);
+    // In case product-display page is created,
+    // this can be used to navigate to the page.
+    // console.log('debug: onProductCardPress: ', data);
   };
 
   const onAddToCartPress = (data: Product): void => {
