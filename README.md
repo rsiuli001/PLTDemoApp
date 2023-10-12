@@ -46,10 +46,12 @@ yarn ios
 
 
 ### Product List Screen
+The screen showcases a product list alongside the cart item count. A badge will dynamically appear on the cart icon only if the number of items surpasses zero.
+
 ![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-11 at 16.36.49.png>)
 
 ### Counter added on Cart Screen
-Product Counter added on the Cart page. On decreasing the counter to 0, the product will be removed from the cart.
+A product counter has been implemented on the Cart page. If the counter is reduced to 0, the corresponding product will be automatically removed from the cart.
 
 ![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-12 at 11.51.17.png>)
 
