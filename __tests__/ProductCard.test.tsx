@@ -11,7 +11,7 @@ const mockData: Product = {
   price: 10
 };
 
-test('Render Product Card compoennt.', () => {
+test('Render Product Card component.', () => {
   const mockOnPress = jest.fn();
   const mockOnAddToCart = jest.fn();
   render(<ProductCard data={mockData} onAddToCart={mockOnAddToCart} onPress={mockOnPress} />);

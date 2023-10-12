@@ -44,11 +44,14 @@ yarn ios
 
 ## Screenshots of the application:
 
+
+### Product List Screen
 ![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-11 at 16.36.49.png>)
 
-![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-11 at 16.37.25.png>)
+### Counter added on Cart Screen
+Product Counter added on the Cart page. On decreasing the counter to 0, the product will be removed from the cart.
 
-![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-11 at 16.37.36.png>)
+![Alt text](<Simulator Screen Shot - iPhone SE (3rd generation) - 2023-10-12 at 11.51.17.png>)
 
 
 <video src="Simulator%20Screen%20Recording%20-%20iPhone%2014%20Pro%20-%202023-10-10%20at%2019.12.02.mp4" controls title="Title"></video>
